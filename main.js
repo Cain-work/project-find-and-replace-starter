@@ -9,15 +9,32 @@ const replaceAllButton = document.querySelector(".replace-all-button")
 // Later you will need an OUTER LOOP to loop over the individual elements within
 // this array.
 const rowElements = document.querySelectorAll(".row")
+const cellElements = document.querySelectorAll(".cell")
 
-// When you call the function belwo, it will get and return an INNER ARRAY
+function rows(rowElements = []) {
+    return(rows = [])
+    
+    function cells(cellElements = []) {
+        return(cells = [])
+    }
+}
+console.log(rowElements)
+console.log(cellElements)
+// When you call the function below, it will get and return an INNER ARRAY
 // containing the cell elements for a given row.
 // Call this function from WITHIN your row elements loop. Then you will, in turn,
 // need to loop over the resulting cell elements. But where should this whole
 // NESTED LOOP go? Think through the user's experience: when should WHAT happen? 
-function getCellElements (currentRowElement) {
-    return currentRowElement.querySelectorAll(".cell")
-}
+//replaceAllButton.addEventListener('click', function () {
+
+    let getCellElements = cellElements
+        console.log(getCellElements)
+    function getCellElements(cellElements[]) {
+        return getCellElements
+
+    }
+})
+        console.log(getCellElements)
 
 
 // YOUR CODE GOES HERE
