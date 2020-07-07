@@ -21,14 +21,21 @@ const rowElements = document.querySelectorAll(".row")
 // YOUR CODE GOES HERE
  
 replaceAllButton.addEventListener('click', function() {
-     findInput = getCellElements()
-     replaceInput = getCellElements()
+      let findInput = 
+      let replaceInput =
         console.log = findInput
         console.log = replaceInput
 
-    for(let i = 0; i < currentRowElement.length; i++){
-        let currentRowElement = rows[i]
+    for(let index = 0; index < rowElement.length; index++){
+        let rowElement = rows[getCellElements()]
         let cells = currentRowElement.querySelectorAll(".cell")
+        for(let replace = 0; replace < cells.length; replace++){
+               let currentCell = cells[replace]
+                if(currentCell.innerHTML === searchInputValue){
+                    currentCell.innerHTML = replaceInputValue
+                    return
+                }
+            }
 } 
 })
 
