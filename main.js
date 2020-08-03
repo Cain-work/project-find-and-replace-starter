@@ -8,35 +8,36 @@ const replaceAllButton = document.querySelector(".replace-all-button")
 // Later you will need an OUTER LOOP to loop over the individual elements within
 // this array.
 const rowElements = document.querySelectorAll(".row")
-
+console.log(rowElements[0])
 // When you call the function below, it will get and return an INNER ARRAY
 // containing the cell elements for a given row.
 // Call this function from WITHIN your row elements loop. Then you will, in turn,
 // need to loop over the resulting cell elements. But where should this whole
 // NESTED LOOP go? Think through the user's experience: when should WHAT happen? 
- function getCellElements (currentRowElement) {
-        return currentRowElement.querySelectorAll(".cell")
-    }
+function getCellElements(currentRowElement) {
+    return currentRowElement.querySelectorAll(".cell")
+}
 
 // YOUR CODE GOES HERE
- 
-replaceAllButton.addEventListener('click', function() {
-      let findInput = 
-      let replaceInput =
-        console.log = findInput
-        console.log = replaceInput
 
-    for(let index = 0; index < rowElement.length; index++){
-        let rowElement = rows[getCellElements()]
-        let cells = currentRowElement.querySelectorAll(".cell")
-        for(let replace = 0; replace < cells.length; replace++){
-               let currentCell = cells[replace]
-                if(currentCell.innerHTML === searchInputValue){
-                    currentCell.innerHTML = replaceInputValue
-                    return
-                }
+replaceAllButton.addEventListener('click', function () {
+    let findInputValue = findInput.value
+    let replaceInputValue = replaceInput.value
+    
+
+    for (let index = 0; index < rowElements.length; index++) {
+        let currentRowElement = rowElements[index]
+        let rowElementCells = getCellElements(currentRowElement)
+        
+        for (let i = 0; i < rowElementCells.length; i++) {
+            let currentCell = rowElementCells[i]
+            
+            if (currentCell.innerHTML.includes(findInputValue)) {
+                currentCell.innerHTML= currentCell.innerHTML.replace(findInputValue, replaceInputValue) 
+           
             }
-} 
+        }
+    }
 })
 
 
